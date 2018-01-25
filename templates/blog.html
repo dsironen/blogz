@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='header'>
+<h1>All Blogz</h1>
+</div>
+
+<div class='content'>
+{% if blogs|length == 0 %}
+<p>No blogs yet. <a href='/newpost'>Add one!</a></p>
+{% else %}
+
+        {% for blog in blogs %}
+        <div class='box'>
+            <p><a href='/blogpost?id={{blog.id}}'><h3>{{blog.title}}</h3></a></p>
+            <p>{{blog.pub_date}}</p>
+            <p>{{blog.body}}</p>
+            <h6>Written by <a href='/singleUser?id={{blog.user_id}}'>{{blog.user}}</a></h6>
+        </div>
+        {% endfor %}
+        
+{% endif %}
+</div>
+{% endblock %}

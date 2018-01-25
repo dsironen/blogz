@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='header'>
+    <h1>Blogz by {{user.name}}</h1>
+</div>
+
+
+<div class='content'>
+    {% if users_posts|length == 0 %}
+    <p>{{user.name}} has not written any blog posts yet.</p>
+    {% else %}
+
+            {% for post in users_posts %}
+            <div class='box'>
+                <p><a href='/blogpost?id={{post.id}}'><h3>{{post.title}}</h3></a></p>
+                <p>{{post.pub_date}}</p>
+                <p>{{post.body}}</p>
+
+            </div>
+            {% endfor %}
+
+    {% endif %}
+    </div>
+
+{% endblock %}

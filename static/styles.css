@@ -1,0 +1,43 @@
+.error {
+    color: red;
+}
+
+textarea {
+    height: 350px;
+    width: 600px;
+}
+
+.header {
+    float: center;
+    background-color: rgb(50, 108, 52);
+    text-align: center;
+}
+
+.content {
+    float: left;
+    margin: 30px;
+}
+
+.box {
+    background-color: rgba(196, 196, 196, 0.603);
+    border-radius: 5px;
+    padding: 10px 20px 5px 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.round {
+    border: 5px;
+    border-color: green;
+    border-radius: 25%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    box-shadow: 3px 3px 3px darkslategrey;
+    font-size: 1em;
+}
